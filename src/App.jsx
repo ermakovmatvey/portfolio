@@ -3,10 +3,11 @@ import { MainLayout } from './components/layout/MainLayout'
 import { ScrollToTop } from './components/layout/ScrollToTop'
 import { HomePage } from './pages/HomePage'
 import { ProjectDetailPage } from './pages/ProjectDetailPage'
+import { routerBasename } from './lib/publicUrl'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename()}>
       <ScrollToTop />
       <MainLayout>
         <Routes>

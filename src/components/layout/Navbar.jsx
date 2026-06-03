@@ -103,7 +103,11 @@ export function Navbar() {
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
-                    href={isHome ? link.href : `/${link.href}`}
+                    href={
+                      isHome
+                        ? link.href
+                        : `${import.meta.env.BASE_URL}#${link.href.replace(/^#/, '')}`
+                    }
                     className={NAV_LINK_CLASS}
                     onClick={(e) => handleNavClick(e, link.href)}
                   >

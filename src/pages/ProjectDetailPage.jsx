@@ -11,6 +11,7 @@ import { ProjectGallery } from '../components/projects/ProjectGallery'
 import { cn } from '../lib/cn'
 import { formatProjectDateRange } from '../lib/formatProjectDate'
 import { STATUS_COLORS, STATUS_LABELS } from '../lib/projectStatus'
+import { publicUrl } from '../lib/publicUrl'
 
 function getProjectGallery(project) {
   if (project.gallery?.length > 0) return project.gallery
@@ -45,14 +46,15 @@ function ContentSection({ section }) {
 
   if (section.type === 'image') {
     const alt = section.alt || 'Project image'
+    const imageSrc = publicUrl(section.content)
     return (
       <LightboxImage
-        src={section.content}
+        src={imageSrc}
         alt={alt}
         className="my-8 overflow-hidden rounded-xl border border-border"
       >
         <img
-          src={section.content}
+          src={imageSrc}
           alt={alt}
           className="w-full"
           loading="lazy"

@@ -1,5 +1,6 @@
 import { SITE } from '../../lib/constants'
 import { cn } from '../../lib/cn'
+import { publicUrl } from '../../lib/publicUrl'
 
 function brandNameWithFavicon(fullName) {
   const space = fullName.indexOf(' ')
@@ -20,7 +21,7 @@ export function SiteBrand({ className }) {
     <span className={cn('inline-flex items-center', className)}>
       {brand.showFavicon && (
         <img
-          src="/favicon.svg"
+          src={publicUrl('/favicon.svg')}
           alt=""
           className="h-[1.2em] w-[1.2em] shrink-0"
           width={24}

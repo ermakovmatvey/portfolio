@@ -1,18 +1,23 @@
 import { useEffect, useState } from 'react'
 import { cn } from '../../lib/cn'
+import { publicUrl } from '../../lib/publicUrl'
 
 export const IMAGE_PLACEHOLDER = '/images/placeholder.svg'
 
+function resolveSrc(src) {
+  return publicUrl(src || IMAGE_PLACEHOLDER)
+}
+
 export function SafeImage({ src, alt, className, onError, ...props }) {
-  const [currentSrc, setCurrentSrc] = useState(src || IMAGE_PLACEHOLDER)
+  const [currentSrc, setCurrentSrc] = useState(() => resolveSrc(src))
 
   useEffect(() => {
-    setCurrentSrc(src || IMAGE_PLACEHOLDER)
+    setCurrentSrc(resolveSrc(src))
   }, [src])
 
   const handleError = (event) => {
-    if (currentSrc !== IMAGE_PLACEHOLDER) {
-      setCurrentSrc(IMAGE_PLACEHOLDER)
+    if (currentSrc !== resolveSrc(IMAGE_PLACEHOLDER)) {
+      setCurrentSrc(resolveSrc(IMAGE_PLACEHOLDER))
     }
     onError?.(event)
   }

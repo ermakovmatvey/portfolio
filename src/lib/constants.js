@@ -1,3 +1,5 @@
+import { publicUrl } from './publicUrl'
+
 export const SECTION_IDS = {
   hero: 'hero',
   projects: 'projects',
@@ -25,7 +27,7 @@ export const HERO = {
   supporting:
     'Focused on creating intuitive products through thoughtful design, modern development practices, and continuous learning.',
   resumeAvailable: true,
-  resumeHref: '/resume.pdf',
+  resumeHref: publicUrl('/resume.pdf'),
 }
 
 export const IMAGE_TINT_OVERLAY =
@@ -36,8 +38,8 @@ export const HERO_PROFILE_CARD = {
   location: 'Charlotte, NC',
   status: 'Open to work',
   contactText: 'Contact Me',
-  avatarUrl: '/images/sprite_0.png',
-  avatarBlinkUrl: '/images/sprite_1.png',
+  avatarUrl: publicUrl('/images/sprite_0.png'),
+  avatarBlinkUrl: publicUrl('/images/sprite_1.png'),
   iconUrl: '#',
   behindGlowColor: 'rgba(99, 102, 241, 0.55)',
   innerGradient: IMAGE_TINT_OVERLAY,

@@ -43,7 +43,11 @@ export function MobileMenu({ open, onClose, onNavClick }) {
                 {NAV_LINKS.map((link) => (
                   <li key={link.href}>
                     <a
-                      href={isHome ? link.href : `/${link.href}`}
+                      href={
+                        isHome
+                          ? link.href
+                          : `${import.meta.env.BASE_URL}#${link.href.replace(/^#/, '')}`
+                      }
                       className={cn(NAV_LINK_CLASS, 'block w-full py-3 text-base')}
                       onClick={(e) => onNavClick(e, link.href)}
                     >

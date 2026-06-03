@@ -1,7 +1,9 @@
+import { publicUrl } from '../../lib/publicUrl'
+
 export function ContactPhoneSprite() {
   return (
     <img
-      src="/images/sprite_phone.png"
+      src={publicUrl('/images/sprite_phone.png')}
       alt=""
       width={320}
       height={320}
