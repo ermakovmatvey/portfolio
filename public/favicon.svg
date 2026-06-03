@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="m-fill" x1="5" y1="6" x2="27" y2="26" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#863bff" />
+      <stop offset="0.5" stop-color="#7e14ff" />
+      <stop offset="1" stop-color="#47bfff" />
+    </linearGradient>
+    <linearGradient id="m-shine" x1="16" y1="7" x2="16" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ede6ff" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#ede6ff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="m-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <path
+    fill="url(#m-fill)"
+    d="M5 25V7h5l6 10 6-10h5v18h-5V11l-6 8-6-8v14H5z"
+    filter="url(#m-glow)"
+  />
+  <path fill="url(#m-shine)" d="M5 25V7h5l6 10 6-10h5v18h-5V11l-6 8-6-8v14H5z" />
+</svg>
