@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react'
 import { useScrollLock } from '../../hooks/useScrollLock'
 import { SafeImage } from '../ui/SafeImage'
 import { cn } from '../../lib/cn'
+import { publicUrl } from '../../lib/publicUrl'
 
 function GalleryLightbox({ open, onClose, images, initialIndex, projectTitle }) {
   const [index, setIndex] = useState(initialIndex)
@@ -84,7 +85,7 @@ function GalleryLightbox({ open, onClose, images, initialIndex, projectTitle }) 
                 </button>
                 <img
                   key={slide.src}
-                  src={slide.src}
+                  src={publicUrl(slide.src)}
                   alt={alt}
                   className="max-h-[min(70vh,calc(100vh-12rem))] max-w-[min(100%,calc(100vw-2rem))] rounded-lg object-contain shadow-2xl"
                 />

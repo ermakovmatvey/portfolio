@@ -2,8 +2,21 @@
 export function publicUrl(path) {
   if (!path) return import.meta.env.BASE_URL
   if (/^https?:\/\//i.test(path) || path.startsWith('data:')) return path
+
   const normalized = path.startsWith('/') ? path.slice(1) : path
-  return `${import.meta.env.BASE_URL}${normalized}`
+  let decoded = normalized
+  try {
+    decoded = decodeURIComponent(normalized)
+  } catch {
+    decoded = normalized
+  }
+
+  const encoded = decoded
+    .split('/')
+    .map((segment) => encodeURIComponent(segment))
+    .join('/')
+
+  return `${import.meta.env.BASE_URL}${encoded}`
 }
 
 /** React Router basename: leading slash, no trailing slash. */

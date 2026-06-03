@@ -122,13 +122,13 @@ export const projects = [
     image: '/images/HCAI/ai-assisted-job-search-interface.png',
     gallery: [
       {
-        src: '/images/HCAI/AI-Assisted%20Job%20Search%20Interface.png',
+        src: '/images/HCAI/AI-Assisted Job Search Interface.png',
         title: 'AI-Assisted Job Search Interface',
         description:
           'Job listings screen with ranked results and accessibility-focused navigation designed for blind users.',
       },
       {
-        src: '/images/HCAI/Figma%20Design%20Workspace%20(User%20Flow).png',
+        src: '/images/HCAI/Figma Design Workspace (User Flow).png',
         title: 'Figma Design Workspace (User Flow)',
         description:
           'Overview of prototype structure showing full user flow and interface layout design.',
@@ -177,20 +177,20 @@ export const projects = [
       'Machine learning pipeline analyzing patterns in short-form video content.',
     longDescription:
       'Developed a machine learning pipeline to analyze patterns in trending short-form video content using a Kaggle dataset of TikTok and YouTube Shorts trends from Summer 2022. The goal of the project was to explore which content attributes (e.g., platform, music features, theme, and metadata) correlate with higher likelihood of appearing in trending lists.',
-    image: '/images/ML/video%20trends/count-of-each-theme.png',
+    image: '/images/ML/video trends/count-of-each-theme.png',
     gallery: [
       {
-        src: '/images/ML/video%20trends/count-of-each-theme.png',
+        src: '/images/ML/video trends/count-of-each-theme.png',
         title: 'Exploratory Data Analysis: Distribution of Video Themes',
         description: 'Visualized class distribution of video themes in the dataset, revealing significant imbalance (e.g., Comedy dominance), which informed interpretation of model performance and limitations.',
       },
       {
-        src: '/images/ML/video%20trends/Feature%20encoding.png',
+        src: '/images/ML/video trends/Feature encoding.png',
         title: 'Feature Engineering: Categorical Encoding of Video Themes',
         description: 'Converted categorical theme labels into numerical values using mapping techniques to enable machine learning model training and feature compatibility with Scikit-learn.',
       },
       {
-        src: '/images/ML/video%20trends/Model%20Evaluation%20Results.png',
+        src: '/images/ML/video trends/Model Evaluation Results.png',
         title: 'Model Evaluation Results',
         description: 'Evaluation metrics and results comparing model performance across trained classifiers on the short-form video trends dataset.',
       },
@@ -246,12 +246,12 @@ export const projects = [
         description: 'Landing page of the SafeApply job application platform.',
       },
       {
-        src: '/images/SafeApply/Interest%20form.png',
+        src: '/images/SafeApply/Interest form.png',
         title: 'Personalized Job Preference Input Interface',
         description: 'User input interface prompting job seekers to specify interests and search criteria before generating results. Designed and structured using Django templating and HTML to create a clear, guided onboarding experience that supports personalized job filtering.',
       },
       {
-        src: '/images/SafeApply/Registration%20Page.png',
+        src: '/images/SafeApply/Registration Page.png',
         title: 'Registration Page',
         description: 'User registration page with form validation and secure account creation. Designed and structured using Django templating and HTML to create a clear, guided onboarding experience that supports personalized job filtering.',
       },
@@ -361,7 +361,7 @@ export const projects = [
           'Restaurant overview and filtering system with dietary filters and group-based “Party Filter” to support multi-user decision making.',
       },
       {
-        src: '/images/FoodFinder/Dietary%20Preference%20Onboarding%20Flow.png',
+        src: '/images/FoodFinder/Dietary Preference Onboarding Flow.png',
         title: 'Dietary Preference Onboarding Flow',
         description:
           'Sign-up flow allowing users to specify dietary restrictions, forming the foundation for personalized filtering and recommendations.',
